@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-ToDoListApplication<toDoList>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.riwi.toDoList.ToDoListApplication",
+            "projectName": "toDoList",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
