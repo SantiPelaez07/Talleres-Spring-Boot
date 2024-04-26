@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.riwi._02_RegistroEventos.entities.Reservation;
@@ -28,8 +27,8 @@ public class ReservationController {
     @Autowired
     private final IReservationService objIReservationService;
 
-    @GetMapping
-    public ResponseEntity<Page<Reservation>> findAll(@RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "3") int size ){
+    @GetMapping("/{page}/{size}")
+    public ResponseEntity<Page<Reservation>> findAll(@PathVariable int page, @PathVariable int size ){
         Page<Reservation> objReservation = this.objIReservationService.findAllReservation(page, size);
         return ResponseEntity.ok(objReservation);
     }
