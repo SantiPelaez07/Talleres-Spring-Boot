@@ -30,7 +30,7 @@ public class Course {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(length = 30, nullable = false)
-    private String course_name;
+    private String courseName;
     @Column(length = 200, nullable = false)
     private String description;
 

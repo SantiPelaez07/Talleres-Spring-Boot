@@ -37,5 +37,5 @@ public class Enrollment {
     /* Relación con Courses */
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "courseId", referencedColumnName = "id")
-    private Course courses;
+    private List<Course> courses;
 }
