@@ -40,7 +40,7 @@ public class User {
     @Column(nullable = false)
     private Role role;
 
-    /* Relación con las inscripciones */
+    /* Relación con las inscripciones */    
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = false)

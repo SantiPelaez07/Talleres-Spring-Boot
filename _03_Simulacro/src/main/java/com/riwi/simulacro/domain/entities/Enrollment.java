@@ -1,7 +1,6 @@
 package com.riwi.simulacro.domain.entities;
 
 import java.time.LocalDate;
-import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -32,10 +31,10 @@ public class Enrollment {
     /* Relación con User */
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "userId", referencedColumnName = "id")
-    private List<User> users;
+    private User user;
 
     /* Relación con Courses */
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "courseId", referencedColumnName = "id")
-    private List<Course> courses;
+    private Course course;
 }

@@ -52,4 +52,7 @@ public class Course {
     @EqualsAndHashCode.Exclude
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "course", cascade = CascadeType.ALL, orphanRemoval = false)
     private List<Message> messages;
+
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "course", cascade = CascadeType.ALL, orphanRemoval = false)
+    private List<Enrollment> enrollments;
 }
